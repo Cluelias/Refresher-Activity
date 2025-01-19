@@ -1,0 +1,64 @@
+.main-con{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	border: 3px solid black;
+	padding: 10px;
+}
+.mission-vision{
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin-right: 10px;
+  float: left;
+  width: 200px;
+  height: 400px;
+  box-sizing: border-box;
+}
+.designers-grid{
+  float: right;
+  margin-left: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  width: 300px;
+  height: 180px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.image-container {
+    width: 90%;
+    height: 50%;
+    margin-top: 50px;
+    padding-bottom: 56.25%;
+    position: relative;
+	border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    z-index: 1;
+}
+.hover-img:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

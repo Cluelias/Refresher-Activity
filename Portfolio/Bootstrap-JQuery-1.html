@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap/Jquery</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+	<style>
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 7.3px;
+      text-align: center;
+      border-radius: 7.5px;
+      margin-top: -42px;
+      margin-bottom: 15px;
+	width: 99%;
+      font-family: "Times New Roman", Times, serif;
+     
+
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+  </head>
+  <body>
+  <center><nav>
+    <a href="Learning Contract.html">Activity 1</a>
+    <a href="PastorKyraJoey_LabAct1-1.html">Activity 2</a>
+    <a href="index_mockup.html">Activity 3</a>
+    <a href="Homepage.html">Activity 4</a>
+    <a href="Aquino_Pastor-CIT142F-js-calcu1.html">Activity 5</a>
+    <a href="index-4.html">Activity 6</a>
+    <a href="Pastor_KyraJoey_Jquery.html">Activity 7</a>
+    <a href="BootStrap_Pastor_KyraJoey.html">Activity 8</a>
+    <a href="Bootstrap-JQuery-1.html">Activity 9</a>
+    <a href="Bootstrap-jQuery-Activity-3 (2).html">Activity 10</a>
+	<a href="index.html">Return to Main Page</a>
+  </nav></center>
+    <div class="card text-left col-sm-6 mx-auto">
+      <div class="card-header text-center">🎉Welcome to Our University!🎉</div>
+      <div class="card-body">
+        <h5 class="card-title">💖Join Us Now and Slay Your Future!💖</h5>
+        <p class="card-text">
+          Ready to <i>Slayyy</i> Your Future with Us? Apply Now and Let's Get
+          Your Nails Painted Pink!💅. Click <b>Register</b> to Start Your
+          Journey to Success!📝
+        </p>
+      </div>
+
+      <div class="card-footer text-body-secondary text-center">
+        <button type="button" class="btn btn-primary" id="btnShowModal">
+          <b>Register</b>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="RegisterModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="RegisterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="RegisterModalLabel">Save Record</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="user-name" class="col-form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="recipient-name"
+                placeholder="ex. Regina George"
+              />
+
+              <label for="user-course" class="col-form-label">Course</label>
+              <input
+                type="text"
+                class="form-control"
+                id="recipient-course"
+                placeholder="ex. Bachelor of Science in Information Technology"
+              />
+
+              <label for="user-section" class="col-form-label">Section</label>
+              <input
+                type="text"
+                class="form-control"
+                id="recipient-section"
+                placeholder="ex. 2 - P"
+              />
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="saveChangesBtn">
+              Save changes
+              <div
+                id="spinner"
+                class="spinner-border text-dark"
+                role="status"
+                style="display: none"
+              >
+                <span class="sr-only"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <table class="registered-table table-hover col-sm-6 mx-auto">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Course</th>
+            <th scope="col">Section</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="spinner" style="display: none">
+      <div class="spinner"></div>
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+
+  <style>
+    body {
+      padding-top: 50px;
+    }
+
+    .card-header {
+      font-size: 30px;
+    }
+
+    .btn-primary {
+      position: relative;
+      background-color: #f88379;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #f76f63;
+      color: #ffc983;
+    }
+
+    .btn-primary:disabled {
+      background-color: #ffc0cb;
+      color: black;
+    }
+
+    .entry {
+      padding-top: 50px;
+    }
+
+    .registered-table {
+      display: none;
+      border-collapse: collapse;
+      border: 3px solid pink;
+      border-radius: 50px;
+    }
+
+    .registered-table th,
+    .registered-table td {
+      border: 1px solid pink;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #spinner {
+      width: 16px;
+      height: 16px;
+    }
+	
+  </style>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      let database = {
+        entries: [],
+      };
+      $("#btnShowModal").click(function () {
+        $("#RegisterModal").modal("show");
+        saveChangesBtn.prop("disabled", true);
+        inputs.forEach(function (input) {
+          input.valid = false;
+          input.input.css("border-color", "pink");
+        });
+      });
+
+      $(".close").click(function () {
+        $("#RegisterModal").modal("hide");
+      });
+
+      $(".btn-secondary").click(function () {
+        $("#RegisterModal").modal("hide");
+      });
+
+      var nameInput = $("#recipient-name");
+      var courseInput = $("#recipient-course");
+      var sectionInput = $("#recipient-section");
+      var saveChangesBtn = $("#saveChangesBtn");
+
+      var inputs = [
+        {
+          input: nameInput,
+          valid: false,
+          validator: function (value) {
+            return value.length > 0 && value.match(/^[A-Za-z\s]+$/);
+          },
+        },
+        {
+          input: courseInput,
+          valid: false,
+          validator: function (value) {
+            return value.length > 0 && value.match(/^[A-Za-z\s]+$/);
+          },
+        },
+        {
+          input: sectionInput,
+          valid: false,
+          validator: function (value) {
+            return value.length > 0 && value.match(/^\d+-\s*[A-Za-z]$/);
+          },
+        },
+      ];
+
+      inputs.forEach(function (input) {
+        input.input.keyup(function () {
+          var value = input.input.val();
+
+          if (input.validator(value)) {
+            input.input.css("border-color", "blue");
+            input.valid = true;
+          } else {
+            input.input.css("border-color", "pink");
+            input.valid = false;
+          }
+
+          if (value === "") {
+            saveChangesBtn.prop("disabled", true);
+          } else {
+            saveChangesBtn.prop("disabled", false);
+          }
+
+          var allValid = inputs.every(function (input) {
+            return input.valid;
+          });
+
+          if (allValid) {
+            saveChangesBtn.prop("disabled", false);
+          } else {
+            saveChangesBtn.prop("disabled", true);
+          }
+        });
+      });
+
+      $("#saveChangesBtn").click(function () {
+        $(this).prop("disabled", true);
+        $(".registered-table").hide();
+
+        $("#spinner").show();
+        var name = $("#recipient-name").val();
+        var course = $("#recipient-course").val();
+        var section = $("#recipient-section").val();
+        var id =
+          "23-" +
+          Math.floor(Math.random() * 10000)
+            .toString()
+            .padStart(4, "0") +
+          "-" +
+          Math.floor(Math.random() * 1000)
+            .toString()
+            .padStart(3, "0");
+
+        database.entries.push({ id, name, course, section });
+
+        var row = `
+          <tr>
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${course}</td>
+            <td>${section}</td>
+            <td><button class="btn btn-danger deleteBtn" data-id="${id}">Delete</button></td>
+          </tr>
+        `;
+
+        // Clear the input fields
+        $("#recipient-name").val("");
+        $("#recipient-course").val("");
+        $("#recipient-section").val("");
+
+        setTimeout(function () {
+          $("#RegisterModal").modal("hide");
+        }, 3000);
+
+        // Clear the tag to include the following entries
+        $(".card-title").hide();
+        $(".card-text").hide();
+
+        $("#RegisterModal").on("hidden.bs.modal", function () {
+          $("#spinner").hide();
+          $(".card-body").html(
+            '<center><p class="card-text">You have successfully registered</p></center>'
+          );
+          $(".card-body").append(
+            '<center><h3 class="card-text">' +
+              name +
+              " | " +
+              course +
+              " | " +
+              section +
+              "</h3></center>"
+          );
+          $(".registered-table").show();
+
+          $("#saveChangesBtn").prop("disabled", false);
+        });
+        $(".registered-table tbody").append(row);
+      });
+
+      $(".registered-table").on("click", ".deleteBtn", function () {
+        var id = $(this).data("id");
+
+        // Remove the entry from the database
+        database.entries = database.entries.filter((entry) => entry.id !== id);
+
+        // Remove the row from the HTML table
+        $(this).closest("tr").remove();
+      });
+    });
+  </script>
+</html>

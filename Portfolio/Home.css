@@ -1,0 +1,57 @@
+body {
+  background-color: #4c4b16;
+  font: 'helvetica';
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font: 'Helvetica';
+  color: #f7f1e5;
+}
+h2 {
+  text-align: center;
+  font: 'Helvetica';
+  color: #f7f1e5;
+}
+.container {
+  background-color: #898121;
+}
+.card {
+  height: 300px;
+  background-color: black;
+  width: 90%;
+  margin: 20px;
+  margin-bottom: 50px;
+  float: center;
+}
+.card-header {
+  background-color: white;
+}
+.card-body {
+  height: 100%;
+  object-fit: contain;
+}
+.myimg1 {
+  float: center;
+  width: 100%;
+  height: 100%;
+}
+.myimg2 {
+  float: center;
+  width: 100%;
+  height: 100%;
+}
+.myimg3 {
+  float: center;
+  width: 100%;
+  height: 100%;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.columns {
+  display: table;
+  clear: both;
+}

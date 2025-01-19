@@ -1,0 +1,119 @@
+<!–– 
+  Ducusin, Tristan Jan
+  Pastor, Kyra Joey
+  Ramos, Kenneth Joshua
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Record Management</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+    h2 {
+      color: #e83e8c;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #dee2e6;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+    thead {
+      background-color: #e83e8c; 
+      color: #ffffff;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    .btn-primary, .btn-danger {
+      background-color: #e83e8c; 
+      border-color: #e83e8c; 
+      color: #ffffff;
+      padding: 8px 16px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="mb-4">
+    <center><h2 class="mb-3">Student Records</h2></center>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="course">Course:</label>
+      <input type="text" class="form-control" id="course">
+    </div>
+    <div class="form-group">
+      <label for="section">Section:</label>
+      <input type="text" class="form-control" id="section">
+    </div>
+    <button class="btn btn-primary" onclick="Save_Record()">Save Record</button>
+  </div>
+  <div>
+    <h2 class="mb-3">Record Table</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Section</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="Record_Table"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script>
+  function Save_Record() {
+    var name = $('#name').val().trim();
+    var course = $('#course').val().trim();
+    var section = $('#section').val().trim();
+    if (name === '' || course === '' || section === '') {
+      alert('Please fill in all fields.');
+      return;
+    }
+    var newRow = '<tr>' +
+                  '<td>' + name + '</td>' +
+                  '<td>' + course + '</td>' +
+                  '<td>' + section + '</td>' +
+                  '<td><button class="btn btn-danger" onclick="deleteRow(this)">DELETE</button></td>' +
+                '</tr>';
+
+    $('#Record_Table').append(newRow);
+    $('#name').val('');
+    $('#course').val('');
+    $('#section').val('');
+  }
+  function deleteRow(btn) {
+    $(btn).closest('tr').remove();
+  }
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

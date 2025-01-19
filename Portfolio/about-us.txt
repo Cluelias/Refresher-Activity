@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mission-vision{
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+.designers-grid{
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    z-index: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class ='mission-vision'>
+<h1> PAGE NAME </h1>
+<br>
+mission vision
+<br>
+read more
+</div>
+
+<div class = 'designers-grid'>
+<div class="row">
+
+<div class="column">
+<img src="img1-b.jpg" alt="ey2" class="hover-img">
+</div>
+
+
+<div class="column">
+<img src="img2-b.jpg" alt="ey1" class="hover-img">
+</div>
+
+
+<div class="column">
+<div class="image-container">
+<img src="img3-b.jpg" alt="ey3" class="hover-img">
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+
+

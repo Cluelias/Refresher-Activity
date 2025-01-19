@@ -1,0 +1,28 @@
+.main {
+  width: 80%;
+  height: auto;
+}
+
+section {
+  width: 60%;
+  height: auto;
+  border-width: 10px;
+}
+
+#section-banner {
+  width: 10%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure img {
+  float: left;
+}
+
+aside {
+  width: 20%;
+  float: right;
+}

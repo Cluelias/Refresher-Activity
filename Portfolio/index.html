@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: url('8351265.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh; 
+	  font-size: 14px;
+	  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    }
+
+    .background-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(0, 100%, 90%, 0.3);
+    }
+
+   .container {
+   width: 80%;
+   margin: 20px auto;
+   border: 2px solid #333;
+   border-radius: 10px;
+   z-index: 1; 
+   position: relative; 
+   background-color: rgba(255, 255, 255, 0.8); 
+   padding: 20px; 
+   }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      margin: 20px;
+      border-radius: 7.5px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .about-me,
+    .portfolio {
+      flex: 1;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .about-me img,
+    .portfolio img {
+      width: 25%;
+      border-radius: 8px;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .project-card {
+      flex: 1;
+      background-color: #f4f4f4;
+      border: 2px solid #333;
+      border-radius: 8px;
+      margin: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project-card .project-info {
+      padding: 15px;
+      justify-content: center;
+    }
+
+    .project-card button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+	
+    .hidden {
+      display: none;
+    }
+	
+	.horizontal-line {
+      border: none;
+	  margin-bottom:5px;
+	  width: 800px;
+      border-top: 2px solid #333; 
+    }
+
+    .paragraph-container {
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+      margin-top: -10px;
+      border: none;
+      border-radius: 5px;
+	  margin-left: 30px;
+      cursor: pointer;
+    }
+
+    .paragraph-container p {
+      flex: 1;
+    
+   }  
+	.about-me-container {
+      border-radius: 10px;
+      z-index: 1;
+      position: relative;
+      padding: 20px;
+      max-width: 800px; 
+      margin: auto; 
+      overflow: hidden; 
+    }
+
+    .about-me-container p {
+      max-width: 100%; 
+      margin-bottom: 10px; 
+    }
+	</style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <div class="container">
+    <header>
+      <b><h1>My Portfolio</h1></b>
+    </header>
+    <section>
+      <div class="about-me">
+        <div class="flex-container">
+          <img src="Illustration44.WORKED_detailed_1.jpg" alt="Your Name" >
+		  <div class="about-me-container">
+            <p><b><center><font size="5">About Me</center></font></b></p>
+			 <hr class="horizontal-line"> 
+			 
+			 <p>Hello. I'm Kyra, but you can find me online as Cluelias or Kizunari. I am currently a student at the University of the Cordilleras. 
+			 I have a passion for transforming ideas into reality through coding, drawing, and writing. Although I am still a learning artist and 
+			 programmer, I enjoy exploring new techniques and tools in these fields.
+			 <br>			 
+			 <br>I have experience with:
+			 <br>Programming Languages: Python, Notepad++ and Java
+			 <br>Art Programs: Paint.net, Paint Tool Sai, Adobe Photoshop, Clip Studio Paint
+			 <br>Editing Softwares: Sony Vegas Pro, Shot Cut, After Effects
+			 <br>
+			 </div>
+			 </div>
+          </div>  
+		  <br>
+        <p><b>CLUELIAS||KYRA</b>
+		   <br>Hi, hope you're having a good day.
+		   <br>🌙🌸ł Kizunari ł 3/20
+           <br>🌟🥀Traditional/Digital Artist
+           <br>🪐🍁Multifandom>
+		   <br>🍀🌠(Partial)Programmer</p>
+
+
+    </section>
+
+<header id="portfolio-header" class="portfolio-header">
+  <button id="portfolio-button" class="btn btn-dark btn-lg">My Portfolio</button>
+</header>
+
+    <section id="portfolio-section" class="hidden">
+      <div class="project-cards">
+        <div class="project-card">
+          <div class="project-info
+		  <header id="activity1-header">
+            <h3>Activity 1</h3>
+            <p>Learning Contract</p>
+                 <button id="activity1-description-btn" class="btn btn-info btn-sm">Description</button>
+				 <div id="activity1-description" class="hidden">
+				 <p>This activity has been conducted in a form of HTML.</p>
+				 </div>
+				 <button class="btn btn-dark" onclick="window.location.href='Learning Contract.html'">View Project</button>
+				 </header>
+				 </div>
+				 </div>
+		
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity2-header">
+			 <h3>Activity 2</h3>
+			 <p>LAB ACTIVITY : Webpage</p>
+			 <button id="activity2-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity2-description" class="hidden">
+			 <p>Try replicating the website given: The styling below uses rounded corners, font families, background colors, font colors, text alignment, padding and margins.
+The elements used in the form are divisions, paragraph, horizontal line, breaks and an italic tag.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='PastorKyraJoey_LabAct1-1.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity3-header">
+			 <h3>Activity 3</h3>
+			 <p>LAB ACTIVITY : Mockups to Websites</p>
+			 <button id="activity3-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity3-description" class="hidden">
+			 <p>Create a website based on this figure.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='index_mockup.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity4-header">
+			 <h3>Activity 4</h3>
+			 <p>LAB ACTIVITY: Mockups to HTML + Improved CSS</p>
+			 <button id="activity4-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity4-description" class="hidden">
+			 <p>Use proper colors, fonts, spacing and alignment through the use of CSS.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='Homepage.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+    <div class="project-cards">
+      <div class="project-card">
+          <div class="project-info
+		     <header id="activity5-header">
+			 <h3>Activity 5</h3>
+			 <p>LAB ACTIVITY: Introduction to JavaScript</p>
+			 <button id="activity5-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity5-description" class="hidden">
+			 <p>Provide an input forms that will get the students name, section and year level.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='Aquino_Pastor-CIT142F-js-calcu1.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity6-header">
+			 <h3>Activity 6</h3>
+			 <p>Bootstrap Jquery Midterm Exam</p>
+			 <button id="activity6-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity6-description" class="hidden">
+			 <p>Form with buttons and event handlers using JS.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='index-4.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity7-header">
+			 <h3>Activity 7</h3>
+			 <p>Basic JQuery Activity</p>
+			 <button id="activity7-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity7-description" class="hidden">
+			 <p>Create a button that will toggle (hide/show) a division that contains a text.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='Pastor_KyraJoey_Jquery.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity8-header">
+			 <h3>Activity 8</h3>
+			 <p>BootStrap - JavaScript Activity 1</p>
+			 <button id="activity8-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity8-description" class="hidden">
+			 <p>Place a progress bar what is empty with a text of '0%'.
+			 Have 3 buttons that will do the following:
+			 Button 1 will set the width to 33%.
+			 Button 2 will set the width to 66%.
+			 Button 3 will set the width to 100%.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='BootStrap_Pastor_KyraJoey.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+		
+       <div class="project-cards">
+          <div class="project-card">
+          <div class="project-info
+		     <header id="activity9-header">
+			 <h3>Activity 9</h3>
+			 <p>BootStrap - JavaScript Activity 2</p>
+			 <button id="activity9-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity9-description" class="hidden">
+			 <p>Bootstrap Welcome/Registration Card.</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='Bootstrap-JQuery-1.html'">View Project</button>
+			 </header>
+			 </div>
+			 </div>
+
+        <div class="project-card">
+          <div class="project-info
+		     <header id="activity2-header">
+			 <h3>Activity 10</h3>
+			 <p>Bootstrap - jQuery Activity 3 (by 3s)</p>
+			 <button id="activity10-description-btn" class="btn btn-info btn-sm">Description</button>
+			 <div id="activity10-description" class="hidden">
+			 <p>Create a website that will do the following:
+			 Place a division that contains inputs for:
+			 Name, Course, Section and a button that will save the record - 'Save Record'.
+			 
+			 In another division that contains:
+			 A table that will contain the records of the inputs
+			 provide a header to display the name of the column
+			 and add the row, ACTIONS.
+			 Expected behaviors:
+			 after clicking 'save record', append this set of elements to be part of the table as a row with a button to delete the row 'DELETE'.
+			 after clicking 'DELETE', remove the row of the record within the table.
+			 Note: Utilize jQuery and Bootstrap if possible</p>
+			 </div>
+			 <button class="btn btn-dark" onclick="window.location.href='Bootstrap-jQuery-Activity-3 (2).html'">View Project</button>
+			 </header>
+			 </div>
+			 </div></center>
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <script>
+    $(document).ready(function () {
+      $("#activity1-description-btn").click(function () {
+        $("#activity1-description").slideToggle();
+      });
+
+      $("#activity2-description-btn").click(function () {
+        $("#activity2-description").slideToggle();
+      });
+
+        $("#activity3-description-btn").click(function () {
+        $("#activity3-description").slideToggle();
+      });
+	  
+	    $("#activity4-description-btn").click(function () {
+        $("#activity4-description").slideToggle();
+      });
+	  
+	    $("#activity5-description-btn").click(function () {
+        $("#activity5-description").slideToggle();
+      });
+	  
+	    $("#activity6-description-btn").click(function () {
+        $("#activity6-description").slideToggle();
+      });
+	  
+	    $("#activity7-description-btn").click(function () {
+        $("#activity7-description").slideToggle();
+      });
+	  
+	    $("#activity8-description-btn").click(function () {
+        $("#activity8-description").slideToggle();
+      });
+	  
+	    $("#activity9-description-btn").click(function () {
+        $("#activity9-description").slideToggle();
+      });
+	  
+	    $("#activity10-description-btn").click(function () {
+        $("#activity10-description").slideToggle();
+      });
+
+      $("#portfolio-button").click(function () {
+        $("#portfolio-section").slideToggle();
+      });
+    });
+  </script>
+</body>
+</html>
